@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Hightech Solar Solution - Client Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1.  [Introduction](#1-introduction)
+2.  [Features](#2-features)
+3.  [Live Demo](#3-live-demo)
+4.  [Technologies Used](#4-technologies-used)
+5.  [Installation & Setup (Local Development)](#5-installation--setup-local-development)
+    * [Prerequisites](#prerequisites)
+    * [Backend Setup (Important!)](#backend-setup-important)
+    * [Frontend Setup](#frontend-setup)
+6.  [Project Structure](#6-project-structure)
+7.  [Admin Access](#7-admin-access)
+8.  [Deployment](#8-deployment)
+9.  [Responsive Design](#9-responsive-design)
+10. [Future Enhancements](#10-future-enhancements)
+11. [Contributing](#11-contributing)
+12. [License](#12-license)
+13. [Contact](#13-contact)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 1. Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Welcome to the client-side application for **Hightech Solar Solution**, a modern, responsive web platform designed to showcase solar products, services, and facilitate client interactions. This application serves as the public face for Hightech Solar Solution, providing information, a way to contact the team, and an administrative dashboard for managing content.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Built with React.js, this application emphasizes a dynamic user experience, clean design, and a robust state management system using Redux Toolkit for efficient data handling.
 
-### `npm test`
+## 2. Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Home Page:** Engaging introduction to Hightech Solar Solution, highlighting key services and a call to action. Includes a captivating parallax background effect.
+* **Portfolio Page:** Dedicated section to display past projects or case studies (placeholder content currently).
+* **Products Display:** Dynamically fetches and displays a list of solar products with detailed views for each product.
+* **Services Page:** Comprehensive overview of the various solar services offered.
+* **Contact Page:** A user-friendly form for inquiries, integrated with backend services for message submission. Includes company contact details.
+* **User Authentication:** Secure login and registration system.
+* **Protected Admin Dashboard:** A dedicated area for administrators, accessible only after successful login, to manage the site.
+    * **Owner Profile:** Displays details about the owner, Darrow Nzau.
+    * **Admin Messages:** View messages submitted via the contact form.
+* **Booking Page:** Placeholder for future booking functionalities.
+* **Responsive Design:** Optimized for seamless viewing and interaction across various devices (desktops, tablets, mobile phones).
 
-### `npm run build`
+## 3. Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can view the live deployed version of the application here:
+[Link to Live Demo] (e.g., `https://hightech-solar-solution.netlify.app/`)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 4. Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Frontend Framework:** React.js (v18.x)
+* **Routing:** React Router DOM (v6.x)
+* **State Management:** Redux Toolkit (with React Redux bindings)
+* **UI Animations:** AOS (Animate On Scroll)
+* **Styling:** Pure CSS (modular, component-scoped where appropriate)
+* **API Communication:** Axios
+* **Icons:** React Icons
+* **Package Manager:** npm
 
-### `npm run eject`
+## 5. Installation & Setup (Local Development)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get a copy of this project up and running on your local machine for development and testing purposes, follow these steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Node.js (v18.x or v20.x LTS recommended, as v22.x can sometimes have very new compatibility nuances)
+* npm (comes with Node.js)
+* Git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend Setup (IMPORTANT!)
 
-## Learn More
+This frontend application relies on a backend API for functionalities like user authentication, contact form submissions, and potentially product/service data. **You must have the corresponding backend running first.**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* **Base URL:** The frontend is configured to communicate with a backend at `http://127.0.0.1:5000/api`.
+* Ensure your backend server is running and accessible at this address. If your backend is on a different port or domain, you will need to update the `baseURL` in `src/services/api.js`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend Setup
 
-### Code Splitting
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/](https://github.com/)[Your GitHub Username]/hightech-solar-solution-client.git
+    ```
+    (Replace `[Your GitHub Username]` with your actual GitHub username)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2.  **Navigate into the project directory:**
+    ```bash
+    cd hightech-solar-solution-client
+    ```
 
-### Analyzing the Bundle Size
+3.  **Install dependencies:**
+    This command will download and install all the necessary packages defined in `package.json`.
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4.  **Start the development server:**
+    ```bash
+    npm start
+    ```
+    This will open the application in your browser (usually at `http://localhost:3000`). The page will automatically reload if you make changes.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 6. Project Structure

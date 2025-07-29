@@ -1,0 +1,93 @@
+/* src/pages/ProductPage.css */
+
+.product-page-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.product-page-title {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.product-page-subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures image corners are rounded with card */
+    text-decoration: none; /* Removes underline from Link */
+    color: inherit; /* Inherit text color from parent */
+    display: flex; /* Use flexbox for vertical layout */
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    padding-bottom: 20px; /* Add some padding at the bottom of the card */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-wrapper {
+    width: 100%; /* Image takes full width of card */
+    height: 200px; /* Fixed height for consistency */
+    overflow: hidden; /* Hide overflowing parts of the image */
+    border-top-left-radius: 10px; /* Match card border radius */
+    border-top-right-radius: 10px;
+    margin-bottom: 15px; /* Space between image and title */
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-name {
+    font-size: 1.8em;
+    color: #3498db; 
+    margin-bottom: 10px;
+    padding: 0 15px; 
+}
+
+.product-description { 
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+
+@media (max-width: 768px) {
+    .product-page-title {
+        font-size: 2.2em;
+    }
+    .product-page-subtitle {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,216 @@
+/* src/pages/Home.css */
+/* General styles for sections and titles */
+.home-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: center;
+    margin: 60px auto 40px;
+    max-width: 800px;
+}
+
+/* Hero Section - For Parallax Background */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* <--- THIS IS THE PARALLAX EFFECT! */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Important for parallax if child elements go out of bounds */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    z-index: 1; /* Make sure content is above overlay */
+}
+
+.hero-content {
+    position: relative; /* Position content above overlay */
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons .btn {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 15px;
+    border: none; /* Remove default button border */
+}
+
+.hero-buttons .primary-btn {
+    background-color: #3498db; /* Blue */
+    color: white;
+}
+
+.hero-buttons .primary-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.hero-buttons .secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-buttons .secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Services Overview */
+.services-overview {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 3em;
+    color: #28a745; /* Green */
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.view-all-services-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 40px;
+}
+
+.view-all-services-btn:hover {
+    background-color: #218838;
+}
+
+/* New Section: Why Choose Us */
+.why-choose-us {
+    padding: 60px 20px;
+    background-color: #e9ecef; /* Light gray */
+    text-align: center;
+}
+
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.choose-us-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.choose-us-item h3 {
+    color: #3498db; /* Blue */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.choose-us-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+}

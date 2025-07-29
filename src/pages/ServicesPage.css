@@ -1,0 +1,71 @@
+/* src/pages/ServicesPage.css */
+.services-page-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.services-page-container h1 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.services-page-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-detail-card {
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-card h3 {
+    color: #3498db;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.service-detail-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+@media (max-width: 768px) {
+    .services-page-container h1 {
+        font-size: 2em;
+    }
+    .services-page-container p {
+        font-size: 1em;
+    }
+}

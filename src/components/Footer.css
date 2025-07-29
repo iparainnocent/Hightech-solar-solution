@@ -1,0 +1,50 @@
+.footer {
+    background: linear-gradient(to right, #ff9800, #f57c00);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    margin-top: 4rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #000;
+  }
+  
+  .footer-copy {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  
